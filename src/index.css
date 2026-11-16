@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", Georgia, Cambria, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --color-ebf-forest: #1E5631;
+  --color-ebf-forest-deep: #143D22;
+  --color-ebf-flame: #D94E28;
+  --color-ebf-paper: #FBF9F5;
+  --color-ebf-limestone: #F2EDE4;
+  --color-ebf-ink: #1C1917;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    color: var(--color-ebf-ink);
+    background-color: var(--color-ebf-paper);
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-receipt-sheet,
+  #printable-receipt-sheet * {
+    visibility: visible;
+  }
+  #printable-receipt-sheet {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #ffffff;
+    color: #000000;
+  }
+}

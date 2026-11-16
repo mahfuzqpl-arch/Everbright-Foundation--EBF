@@ -1,0 +1,6 @@
+{
+  "name": "Everbright Foundation (EBF)",
+  "description": "A non-profit organization for social development empowering communities across Bangladesh and Germany since July 2003.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
